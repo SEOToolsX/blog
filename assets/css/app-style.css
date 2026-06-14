@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9e9ef;
+  font-family: system-ui, 'Segoe UI', 'Noto Nastaliq Urdu', 'Amiri', serif;
+  direction: rtl;
+}
+
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fefefe;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  padding: 20px 16px 8px 16px;
+  background: linear-gradient(135deg, #1e5f4b, #2c7a5e);
+  color: white;
+  text-align: center;
+}
+.app-header h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.tagline {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Categories scroll */
+.categories-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+.cat-btn {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cat-btn.active {
+  background: #2c7a5e;
+  color: white;
+}
+
+/* Tab Bar (bottom navigation) */
+.tab-bar {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 10px 0 14px;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  bottom: 0;
+}
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #777;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 6px 12px;
+  border-radius: 30px;
+}
+.tab.active {
+  color: #2c7a5e;
+  font-weight: bold;
+  background: #eef6f2;
+}
+.tab span:first-child {
+  font-size: 20px;
+}
+
+/* Content area */
+.content-area {
+  flex: 1;
+  padding: 16px;
+  background: #fafafc;
+}
+
+/* Post cards */
+.posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.post-card {
+  background: white;
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: 0.2s;
+  border: 1px solid #eee;
+}
+.post-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #1e2a2a;
+}
+.post-cat-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.cat-tag {
+  background: #e0f0ea;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #1e5f4b;
+}
+.post-card p {
+  font-size: 14px;
+  color: #444;
+  margin: 8px 0;
+}
+.post-card a {
+  display: inline-block;
+  margin-top: 6px;
+  color: #2c7a5e;
+  text-decoration: none;
+  font-weight: 500;
+}
