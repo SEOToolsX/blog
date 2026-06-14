@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>{{ site.title }} | {{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/app-style.css' | relative_url }}">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header: Title & Tagline -->
+    <header class="app-header">
+      <h1>{{ site.title }}</h1>
+      <p class="tagline">{{ site.tagline }}</p>
+    </header>
+
+    <!-- Categories Row (Hamd, Naat, Manqabat, Salam, Dua, Nazam ...) -->
+    <div class="categories-scroll">
+      <button class="cat-btn active" data-cat="all">سب</button>
+      <button class="cat-btn" data-cat="Hamd">حمد</button>
+      <button class="cat-btn" data-cat="Naat">نعت</button>
+      <button class="cat-btn" data-cat="Manqabat">منقبت</button>
+      <button class="cat-btn" data-cat="Salam">سلام</button>
+      <button class="cat-btn" data-cat="Dua">دعا</button>
+      <button class="cat-btn" data-cat="Nazam">نظم</button>
+    </div>
+
+    <!-- Tab Bar (Recent, Favorites, All) -->
+    <div class="tab-bar">
+      <div class="tab" data-tab="recents">
+        <span>🕒</span> <span>حالیہ</span>
+      </div>
+      <div class="tab" data-tab="favorites">
+        <span>❤️</span> <span>پسندیدہ</span>
+      </div>
+      <div class="tab" data-tab="all">
+        <span>📖</span> <span>تمام</span>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="content-area" id="mainContent">
+      {{ content }}
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="{{ '/assets/js/app.js' | relative_url }}"></script>
+</body>
+</html>
